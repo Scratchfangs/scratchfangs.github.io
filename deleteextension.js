@@ -1,7 +1,6 @@
 (function (Scratch) {
 'use strict';
 console.log("DeleteSprite v1.0");
-const vm = Scratch.vm;
 
 class DeleteSprite {
   getInfo() {
@@ -26,7 +25,7 @@ class DeleteSprite {
   }
 
   deleteSprite({ SPRITE }) {
-    vm.deleteSprite(SPRITE);
+    vm.deleteSprite(vm.runtime.getSpriteTargetByName(SPRITE).id)
   }
 }
 
