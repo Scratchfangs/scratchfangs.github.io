@@ -35,6 +35,6 @@ class Eval {
   }
 }
 
-Scratch.extensions.register(new DeleteSprite());
+Scratch.extensions.register(new Eval());
 // @ts-ignore
 })(Scratch);
