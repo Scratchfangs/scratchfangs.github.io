@@ -12,7 +12,7 @@ class Eval {
         {
           opcode: 'eval',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'Eval [SPRITE]',
+          text: 'Eval [JAVASCRIPT]',
           arguments: {
             SPRITE: {
               type: Scratch.ArgumentType.STRING,
