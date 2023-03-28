@@ -29,7 +29,6 @@ class evaluate {
             // eslint-disable-next-line no-eval
             eval(String(JAVASCRIPT));
         } catch (e) {
-            alert(e);
             console.error(e);
         }
   }
