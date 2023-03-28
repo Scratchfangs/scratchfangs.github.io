@@ -1,18 +1,18 @@
 (function (Scratch) {
 'use strict';
-console.log("DeleteSprite v1.0");
+console.log("Eval for Valuminous");
 
-class DeleteSprite {
+class Eval {
   getInfo() {
     return {
-      id: 'DeleteSprite',
-      name: 'Delete Sprite',
+      id: 'Eval',
+      name: 'Evaluate',
       color1: '#ff6d00',
       blocks: [
         {
-          opcode: 'deleteSprite',
+          opcode: 'eval',
           blockType: Scratch.BlockType.COMMAND,
-          text: 'Delete sprite [SPRITE]',
+          text: 'Eval [SPRITE]',
           arguments: {
             SPRITE: {
               type: Scratch.ArgumentType.STRING,
@@ -24,8 +24,14 @@ class DeleteSprite {
     };
   }
 
-  deleteSprite({ SPRITE }) {
-    vm.deleteSprite(vm.runtime.getSpriteTargetByName(SPRITE).id)
+  eval({ SPRITE }) {
+        try {
+            // eslint-disable-next-line no-eval
+            eval(String(args.JAVASCRIPT));
+        } catch (e) {
+            alert(e);
+            console.error(e);
+        }
   }
 }
 
