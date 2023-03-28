@@ -24,7 +24,7 @@ class Eval {
     };
   }
 
-  eval({ SPRITE }) {
+  eval({ JAVASCRIPT }) {
         try {
             // eslint-disable-next-line no-eval
             eval(String(args.JAVASCRIPT));
